@@ -359,7 +359,7 @@ class ScholarArticleParser(object):
         content as needed, and notifies the parser instance of
         resulting instances via the handle_article callback.
         """
-        self.soup = BeautifulSoup(html)
+        self.soup = BeautifulSoup(html, 'lxml')
 
         # This parses any global, non-itemized attributes from the page.
         self._parse_globals()
